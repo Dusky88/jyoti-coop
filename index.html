@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Jyoti Mahila Cooperative</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Jyoti Mahila Cooperative Logo">
+                </div>
+                <div class="company-intro">
+                    Empowering women through collaboration, sustainability, and community-driven excellence.
+                </div>
+            </div>
+            <a href="https://www.facebook.com/jyoti.utpadan.sahakari" target="_blank" class="social-btn">Social Media</a>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="#gallery">Gallery</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to Jyoti Mahila Cooperative</h1>
+                <p>Building a brighter future through women's empowerment and sustainable practices</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <div class="content-section">
+            <!-- First Section -->
+            <div class="content-grid">
+                <div class="text-content">
+                    <h2>Building Sustainable Futures Together</h2>
+                    <p>Jyoti Mahila Cooperative is dedicated to creating opportunities for economic empowerment and social growth. Through collaborative efforts, we transform lives and strengthen our community with every project we undertake.</p>
+                    <p>Our members work together to create sustainable livelihoods, preserve traditional crafts, and build a better future for their families and communities.</p>
+                </div>
+                <div class="photo-placeholder">
+                    <img src="images/12.jpeg" alt="Our Community" class="community-img"> 
+                </div>
+            </div>
+
+            <!-- Second Section (Reversed) -->
+            <div class="content-grid reverse">
+                <div class="photo-placeholder rounded">
+                    <img src="images/5.jpeg" alt="Our Work">
+                </div>
+                <div class="text-content">
+                    <h2>Crafted with Care and Expertise</h2>
+                    <p>Every product and service we offer is crafted with dedication, traditional knowledge, and modern innovation. Our members bring years of expertise and passion to deliver quality that speaks for itself.</p>
+                    <p>From handcrafted goods to agricultural products, everything we create reflects our commitment to excellence and sustainability.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section" id="gallery">
+            <h3>Our Work & Impact</h3>
+            <p>Witness the transformation and impact we're making in our community</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="images/7.jpeg" alt="Gallery 1">
+                    </div>
+                    <p class="gallery-caption">Women's Skills Training</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="images/22.jpeg" alt="Gallery 2">
+                    </div>
+                    <p class="gallery-caption">Successful Women Skills Training</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="images/community.jpeg" alt="Gallery 3">
+                    </div>
+                    <p class="gallery-caption">Community Projects</p>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <img src="images/35.jpeg" alt="Gallery 4">
+                    </div>
+                    <p class="gallery-caption">Skill Training Program Initiation</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Jyoti Mahila Cooperative</h3>
+                <p>Empowering women, strengthening communities</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@jyotimahila.coop</p>
+                <p>Phone: +977-XXX-XXXXXX</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jyoti Mahila Cooperative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Gallery expand functionality
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const wasExpanded = this.classList.contains('expanded');
+                
+                document.querySelectorAll('.gallery-item').forEach(i => {
+                    i.classList.remove('expanded');
+                });
+                
+                if (!wasExpanded) {
+                    this.classList.add('expanded');
+                }
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.gallery-item')) {
+                document.querySelectorAll('.gallery-item').forEach(i => {
+                    i.classList.remove('expanded');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
